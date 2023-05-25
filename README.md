@@ -1,12 +1,11 @@
 # Install
 ```shell
-# 包版本: mmpretrain==1.0.0rc7
 # 系统: Ubuntu 21.04
 # 创建conda虚拟环境
 conda create -n mmpretrain python=3.8 pytorch==1.10.1 torchvision==0.11.2 cudatoolkit=11.3 -c pytorch -y
 conda activate mmpretrain
 
-# 安装mmpretrain
+# 安装mmpretrain==1.0.0rc7
 git clone https://github.com/Sadwy/mlp-cnn
 cd mlp-cnn
 python setup.py develop
