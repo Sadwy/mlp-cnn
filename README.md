@@ -2,8 +2,15 @@
 ```shell
 # 系统: Ubuntu 21.04
 # 创建conda虚拟环境
-conda create -n mmpretrain python=3.8 pytorch==1.10.1 torchvision==0.11.2 cudatoolkit=11.3 -c pytorch -y
+conda create -n mmpretrain python=3.8 -y
 conda activate mmpretrain
+
+# 配置环境包
+conda install pytorch=2.0.1 torchvision=0.15.2 -c pytorch -y
+pip install openmim
+python -m mim install mmcv==2.0.0
+python -m mim install mmengine==0.7.3
+pip install future tensorboard  # 可视化, 使用tensorboard可视化准确率和loss曲线
 
 # 安装mmpretrain==1.0.0rc7
 git clone https://github.com/Sadwy/mlp-cnn
@@ -13,7 +20,7 @@ python setup.py develop
 
 # Train
 ```shell
-python tools/train.py configs/acustom/fashion_custom.py
+python tools/train.py configs/custom/fashion_custom.py
 ```
 ## 修改配置 config
 configs/custom/fashion_custom.py
@@ -24,10 +31,6 @@ configs/custom/fashion_custom.py
 - 第47-48行, 默认使用的是SGD优化器. 注释47-48行, 取消49-59的注释, 则使用的是Adam优化器.
 
 # Visualization
-```shell
-# 安装包, 使用tensorboard可视化准确率和loss曲线
-pip install future tensorboard
-```
 训练时输出的信息中有显示 `Exp name`, 比如 `Exp name: fashion_custom_20230525_131400`. 则使用以下指令可视化:
 ```shell
 tensorboard --host localhost --load_fast=true --logdir work_dirs/fashion_custom/20230525_131400
