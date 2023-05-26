@@ -35,8 +35,8 @@ configs/custom/fashion_custom.py
 ```shell
 tensorboard --host localhost --load_fast=true --logdir work_dirs/fashion_custom/20230525_131400
 ```
-- 指令中的路径是训练时自动创建的.
-- `fashion_custom` 和 `20230525_131400` 分别是配置文件名称和训练时间.
+- 指令中的路径是训练时自动创建的. 其中`fashion_custom` 和 `20230525_131400` 分别是配置文件名称和训练时间, 视情况修改.
+- 如果报错, 尝试修改指令中参数为 `--load_fast=false`. 这可能导致部分曲线显示异常.
 
 # Appendix
 另外实现了使用FashionMNIST数据集训练其他网络.
