@@ -22,13 +22,16 @@ python setup.py develop
 ```shell
 python tools/train.py configs/custom/fashion_custom.py
 ```
-## 修改配置 config
+## 修改配置
 configs/custom/fashion_custom.py
 - 第46行, `max_epochs`设置迭代次数
 - 第13行, 选择使用MLP或CNN网络结构
 - 第48行, `lr` 设置学习率
 - 第31行和第36行, 修改batch_size (建议两行数值相同)
 - 第47-48行, 默认使用的是SGD优化器. 如果使用Adam优化器, 则注释47-48行, 并取消49-59的注释.
+
+mmpretrain/models/backbones/mlp.py & mmpretrain/models/backbones/mlp_cnn.py
+- 分别对应MLP和CNN的网络设计代码, 可以修改网络内部结构.
 
 # Visualization
 训练时输出的信息中有显示 `Exp name`, 比如 `Exp name: fashion_custom_20230525_131400`. 则使用以下指令可视化:
