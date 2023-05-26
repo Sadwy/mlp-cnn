@@ -28,7 +28,7 @@ configs/custom/fashion_custom.py
 - 第13行, 选择使用MLP或CNN网络结构
 - 第48行, `lr` 设置学习率
 - 第31行和第36行, 修改batch_size (建议两行数值相同)
-- 第47-48行, 默认使用的是SGD优化器. 注释47-48行, 取消49-59的注释, 则使用的是Adam优化器.
+- 第47-48行, 默认使用的是SGD优化器. 如果使用Adam优化器, 则注释47-48行, 并取消49-59的注释.
 
 # Visualization
 训练时输出的信息中有显示 `Exp name`, 比如 `Exp name: fashion_custom_20230525_131400`. 则使用以下指令可视化:
