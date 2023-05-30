@@ -30,7 +30,7 @@ configs/custom/fashion_custom.py
 - 第31行和第36行, 修改batch_size (建议两行数值相同)
 - 第47-48行, 默认使用的是SGD优化器. 如果使用Adam优化器, 则注释47-48行, 并取消49-59的注释.
 
-mmpretrain/models/backbones/mlp.py & mmpretrain/models/backbones/mlp_cnn.py
+mmpretrain/models/backbones/mlp.py 和 mmpretrain/models/backbones/mlp_cnn.py
 - 分别对应MLP和CNN的网络设计代码, 可以修改网络内部结构.
 
 # Visualization
