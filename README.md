@@ -34,7 +34,7 @@ mmpretrain/models/backbones/mlp.py 和 mmpretrain/models/backbones/mlp_cnn.py
 - 分别对应MLP和CNN的网络设计代码, 可以修改网络内部结构.
 
 # Visualization
-训练时输出的信息中有显示 `Exp name`, 比如 `Exp name: fashion_custom_20230525_131400`. 则使用以下指令可视化:
+训练时输出的信息中有显示 `Exp name: {CONFIG_NAME}_{RUN_TIME}`, 比如 `Exp name: fashion_custom_20230525_131400`. 则使用以下指令可视化:
 ```shell
 tensorboard --host localhost --load_fast=true --logdir work_dirs/fashion_custom/20230525_131400
 ```
