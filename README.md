@@ -17,6 +17,7 @@ git clone https://github.com/Sadwy/mlp-cnn
 cd mlp-cnn
 python setup.py develop
 ```
+- 上述指令安装的是CPU版本的pytorch. 理论上没有显卡的机器也能使用, 足够支持mmPreTrain框架.
 
 # Train
 ```shell
